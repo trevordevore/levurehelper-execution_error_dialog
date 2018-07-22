@@ -1,3 +1,4 @@
+package folders:
+  - filename: errorLists
 backscripts:
-  1:
-    filename: backscript.livecodescript
+  - filename: errordialog.livecodescript

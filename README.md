@@ -1,3 +1,3 @@
 # execution_error_dialog Helper
 
-Levure helper that processes execution error messages
+The usual more-helpful error dialog handler, updated for use as a Levure Helper
