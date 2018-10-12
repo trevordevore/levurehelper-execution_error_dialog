@@ -1,7 +1,5 @@
 package folders:
   - filename: errorLists
-backscripts:
+libraries:
   - filename: mikeys-error-handler.livecodescript
 packager-callbacks-stackfile: mikeys-error-handler-packager.livecodescript
-package-folders:
-    - filename: errorLists
