@@ -21,12 +21,13 @@ on libraryStack
       put url theFileURL into executionErrors
    #</load the error list>
 
+
    #<set properties>
       put "answer" into errorTarget
-      if levureAppHasProperty("errorTarget") then put levureGetApp ("errorTarget") into errorTarget
+      if levureAppHasProperty("error-target") then put levureAppGet ("error-target") into errorTarget
 
       put "abort" into errorAction
-      if levureAppHasProperty("errorAction") then put levureGetApp ("errorAction") into errorAction
+      if levureAppHasProperty("error-action") then put levureAppGet ("error-action") into errorAction
    #</set properties
 end libraryStack
 
@@ -43,7 +44,7 @@ on errorDialog pExecutionError, pParseError
       if item 3 of line 1 of errmsg is not 0 then put "at char"&&item 3 of line 1 of errmsg&space after goop
 
       if item 2 of line 1 of errmsg is not 0 then put"in line"&&item 2 of line 1 of errmsg after goop
- 
+
       if the number of items in line 1 of errmsg is 4 then
          if item 4 of line 1 of errmsg is not empty then put return&"Hint:"&&item 4 of line 1 of errmsg after goop
       end if # the number of items in errmsg is 4
