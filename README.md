@@ -1,7 +1,7 @@
 # Mikey's Error Handler
 
 ### Error handler for integration as a Levure helper
-If submoduling, path to use is app/helpers/mikeys-error-handler
+If submoduling, path to use is `app/helpers/mikeys-error-handler`
 ### Error lists are kept in a file b/c on mobile LC does not compile the error lists into the app.
 Error list (re)created at app package/build time in case your current version of LC added to or changed the contents of the error list.
 ### Added parameters to keep in project app.yml file
