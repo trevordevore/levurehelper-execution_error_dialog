@@ -10,6 +10,3 @@
 		 ignore (or empty)	(don't report the error).  Note that if there are other targets in a list, this does not override them.
 		 levure 					(sends the error to Levure's logger helper)
 		 msg 						(message box)
-	* error-action: 
-		abort						(exit to top) (this is the default)
-		continue					(continue execution, pass the message for error, which sets ```the result```)
