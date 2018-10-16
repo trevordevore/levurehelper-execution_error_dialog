@@ -22,13 +22,8 @@ on libraryStack
    #</load the error list>
 
 
-   #<set properties>
-      put "answer" into errorTarget
-      if levureAppHasProperty("error-target") then put levureAppGet ("error-target") into errorTarget
-
-      put "abort" into errorAction
-      if levureAppHasProperty("error-action") then put levureAppGet ("error-action") into errorAction
-   #</set properties
+   put "answer" into errorTarget
+   if levureAppHasProperty("error-target") then put levureAppGet ("error-target") into errorTarget
 end libraryStack
 
 
@@ -54,12 +49,6 @@ on errorDialog pExecutionError, pParseError
 
    if "clipboard" is among the items of errorTarget then set the clipboardData to goop
    if "msg" is among the items of errorTarget then put goop
-   if "levure" is among the items of errorTarget then loggerLogMsg goop, "error"
+   if "levure" is among the items of errorTarget  and there is a stack "Logger Library" then loggerLogMsg goop, "error"
    if "answer" is among the items of errorTarget then answer error goop
-
-   if "continue" is among the items of errorAction then
-      return goop for error
-   else #continue is not among the items of errorAction
-      exit to top
-   end if #"continue" is among the items of errorAction
 end errorDialog
